@@ -37,8 +37,8 @@ Based on [Anthropic's research](https://www.anthropic.com/engineering/claude-thi
 ### Prerequisites
 
 1. **Cloudflare Account**: Sign up at [cloudflare.com](https://cloudflare.com)
-2. **Node.js**: Version 18 or higher
-3. **pnpm**: Install via `npm install -g pnpm`
+2. **Node.js**: Preferably with a version manager like [nvm](https://github.com/nvm-sh/nvm)
+3. **pnpm**: [Installation instructions](https://pnpm.io/installation)
 
 ### Installation
 
@@ -67,8 +67,6 @@ claude mcp add think https://your-worker-name.workers.dev/sse -t sse
 # For local development
 claude mcp add think http://localhost:8787/sse -t sse
 ```
-
-**Note**: This server supports both SSE (Server-Sent Events) and Streamable HTTP transport. While SSE works well, Streamable HTTP provides better reliability and is the newer standard.
 
 You can verify the configuration with:
 ```bash
