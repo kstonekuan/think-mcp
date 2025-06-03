@@ -1,0 +1,36 @@
+{
+	"name": "think-mcp",
+	"version": "0.1.0",
+	"description": "MCP server that provides a thinking tool for AI assistants to organize reasoning during complex tasks",
+	"main": "./src/index.ts",
+	"scripts": {
+		"dev": "wrangler dev src/index.ts",
+		"deploy": "wrangler deploy src/index.ts",
+		"cf-typegen": "wrangler types",
+		"build": "pnpm format && pnpm lint:fix && pnpm cf-typegen && pnpm type-check",
+		"format": "biome format --write",
+		"lint": "biome lint",
+		"lint:fix": "biome lint --fix",
+		"type-check": "tsc --noEmit"
+	},
+	"keywords": [
+		"mcp",
+		"thinking",
+		"reasoning",
+		"ai-tools",
+		"cloudflare-workers"
+	],
+	"author": "kstonekuan",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^22.15.29",
+		"typescript": "^5.8.3",
+		"wrangler": "^4.19.0"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.12.1",
+		"agents": "^0.0.94",
+		"zod": "^3.25.49"
+	}
+}
